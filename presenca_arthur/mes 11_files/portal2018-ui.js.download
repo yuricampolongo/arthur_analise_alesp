@@ -1,0 +1,14 @@
+//Jquery UI functions
+$( document ).ready(function() {
+	
+// Paginador Bootstrap (para grid renderizar corretamente)
+	$('#navegacao_paginas').addClass('pagination');
+	
+// Datepicker		
+	$(".datepicker").datepicker({
+		format: 'dd/mm/yyyy',//check change
+		yearRange: '1835:2022',
+	    changeMonth: true,
+	    changeYear: true
+	  });
+});

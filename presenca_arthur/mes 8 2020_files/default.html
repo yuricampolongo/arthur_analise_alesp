@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)https://www.al.sp.gov.br/sigp-portal/default.xhtml -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link type="text/css" rel="stylesheet" href="./theme.css.xhtml"><link type="text/css" rel="stylesheet" href="./primefaces.css.xhtml"><script type="text/javascript" src="./jquery.js.xhtml"></script><script type="text/javascript" src="./jquery-plugins.js.xhtml"></script><script type="text/javascript" src="./primefaces.js.xhtml"></script>
+	<title>Presença nas sessões plenárias</title>
+	<style type="text/css">
+
+
+		/*Só para debug*/
+		table, td, tr{
+			/*border-width:1px;
+			border-style:solid;
+			border-color:black;
+			padding:0px;			*/
+		}	
+
+
+		/*Elementos*/
+
+		body, body *{
+			font-family: "Lucida Sans Unicode", "Trebuchet MS", Arial, sans-serif;	
+		}
+	
+		fieldset{
+			border-radius: 10px;
+		}
+
+		ul{
+			margin:0px 0px 25px 0px;
+			padding:0;
+		}
+
+		sup{
+			font-size: 9px;
+			font-weight: bold;
+		}
+
+		/*Classes*/
+		
+		.divScrollable{
+			overflow-y:scroll;
+			overflow-x:auto;
+		}
+
+		.legenda{
+			margin-left:15px;
+			width: 570px;
+			
+			font-size: 14px;		
+
+		}		
+		
+		.defaultHeader{
+			margin: 2px 2px 20px 2px;
+			font-size: 20px;
+			font-weight: 400;
+			color: #990000;
+		}
+		
+		.headerFieldset{
+			margin: 2px 2px 20px 2px;
+			font-size: 14px;
+			font-weight: 400;
+			color: #990000;
+		}
+			
+		.listLegenda{
+			list-style-type:none;
+		}
+		
+		.elementoFiltro{
+			margin-left:20px;
+		}
+		
+		.infoPresenca{
+			border: 1px solid #F4F4F4;
+			height:25px;
+			width:25px;
+			min-height:25px;
+			min-width:25px;
+			font-size: 12px;
+			background:#F0F0F0;
+			text-align: center;
+		}
+		
+		.headerPresenca{
+			width:100px;
+			min-width:200px;
+			align:center;
+			text-align: left;	
+		}
+
+		/*ID's*/	
+
+		#sndExp, #indExp, #riExp{
+			font-size: 12px;
+		}	
+	</style></head><body marginwidth="0" marginheight="0" style="">
+		<h2 class="defaultHeader">Presença nas sessões plenárias  - Arthur do Val </h2>
+<form id="formFiltros" name="formFiltros" method="post" action="https://www.al.sp.gov.br/sigp-portal/default.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="formFiltros" value="formFiltros">
+
+				
+		<fieldset>
+		<legend>Selecione os dados para filtrar</legend><label for="formFiltros:listaDeputados" class="elementoFiltro">Deputado: </label><select id="formFiltros:listaDeputados" name="formFiltros:listaDeputados" size="1">	<option value="">selecione</option>
+	<option value="1137">Adalberto Freitas</option>
+	<option value="1138">Adriana Borgo</option>
+	<option value="1139">Agente Federal Danilo Balas</option>
+	<option value="1185">Alessandra Monteiro </option>
+	<option value="1140">Alex de Madureira</option>
+	<option value="496">Alexandre Pereira</option>
+	<option value="1178">Altair Moraes</option>
+	<option value="363">Analice Fernandes</option>
+	<option value="429">André do Prado</option>
+	<option value="1177">Aprigio</option>
+	<option value="1176" selected="selected">Arthur do Val</option>
+	<option value="1175">Ataide Teruel</option>
+	<option value="124">Barros Munhoz</option>
+	<option value="367">Beth Sahão</option>
+	<option value="1174">Bruno Ganem</option>
+	<option value="492">Caio França</option>
+	<option value="153">Campos Machado</option>
+	<option value="1173">Carla Morando</option>
+	<option value="431">Carlão Pignatari</option>
+	<option value="433">Carlos Cezar</option>
+	<option value="417">Carlos Giannazi</option>
+	<option value="1172">Castello Branco</option>
+	<option value="435">Cauê Macris</option>
+	<option value="1171">Cezar</option>
+	<option value="141">Conte Lopes</option>
+	<option value="1170">Coronel Nishikawa</option>
+	<option value="469">Coronel Telhada</option>
+	<option value="1169">Daniel José</option>
+	<option value="1168">Daniel Soares</option>
+	<option value="1167">Delegada Graciela</option>
+	<option value="1166">Delegado Bruno Lima</option>
+	<option value="493">Delegado Olim</option>
+	<option value="1183">Dirceu Dalben</option>
+	<option value="1165">Douglas Garcia</option>
+	<option value="1164">Dr. Jorge Do Carmo</option>
+	<option value="1179">Dra. Damaris Moura</option>
+	<option value="386">Ed Thomas</option>
+	<option value="228">Edmir Chedid</option>
+	<option value="254">Edna Macedo</option>
+	<option value="327">Emidio de Souza</option>
+	<option value="372">Enio Tatto</option>
+	<option value="1163">Erica Malunguinho</option>
+	<option value="239">Estevam Galvão</option>
+	<option value="488">Fernando Cury</option>
+	<option value="1162">Frederico d'Avila</option>
+	<option value="1161">Gil Diniz</option>
+	<option value="382">Gilmaci Santos</option>
+	<option value="1160">Heni Ozi Cukier</option>
+	<option value="1159">Isa Penna</option>
+	<option value="442">Itamar Borges</option>
+	<option value="1180">Janaina Paschoal</option>
+	<option value="299">Jorge Caruso</option>
+	<option value="484">Jorge Wilson Xerife do Consumidor</option>
+	<option value="483">José Américo</option>
+	<option value="445">Leci Brandão</option>
+	<option value="200">Léo Oliveira</option>
+	<option value="1158">Leticia Aguiar</option>
+	<option value="481">Luiz Fernando T. Ferreira</option>
+	<option value="1181">Major Mauro</option>
+	<option value="1157">Major Mecca</option>
+	<option value="477">Márcia Lia</option>
+	<option value="1156">Marcio da Farmácia</option>
+	<option value="1155">Marcio Nakashima</option>
+	<option value="479">Marcos Damasio</option>
+	<option value="403">Marcos Zerbini</option>
+	<option value="347">Maria Lúcia Amary</option>
+	<option value="1154">Marina Helou</option>
+	<option value="480">Marta Costa</option>
+	<option value="1187">Maurici</option>
+	<option value="75">Mauro Bragato</option>
+	<option value="415">Milton Leite Filho</option>
+	<option value="1153">Monica da Mandata Ativista</option>
+	<option value="475">Paulo Correa Jr</option>
+	<option value="1152">Paulo Fiorilo</option>
+	<option value="1151">Professor Kenny</option>
+	<option value="1150">Professora Bebel</option>
+	<option value="1149">Rafa Zimbaldi</option>
+	<option value="280">Rafael Silva</option>
+	<option value="402">Reinaldo Alguz</option>
+	<option value="474">Ricardo Madalena</option>
+	<option value="1148">Ricardo Mellão</option>
+	<option value="203">Roberto Engler</option>
+	<option value="314">Roberto Morais</option>
+	<option value="1147">Rodrigo Gambale</option>
+	<option value="451">Rodrigo Moraes</option>
+	<option value="339">Rogério Nogueira</option>
+	<option value="196">Roque Barbiere</option>
+	<option value="1146">Sargento Neri</option>
+	<option value="452">Sebastião Santos</option>
+	<option value="1145">Sergio Victor</option>
+	<option value="1144">Tenente Coimbra</option>
+	<option value="1143">Tenente Nascimento</option>
+	<option value="472">Teonilio Barba</option>
+	<option value="1142">Thiago Auricchio</option>
+	<option value="1141">Valeria Bolsonaro</option>
+	<option value="362">Vinícius Camarinha</option>
+	<option value="471">Wellington Moura</option>
+</select><label for="formFiltros:mesAnoSessao" class="elementoFiltro">Mes: </label><select id="formFiltros:mesAnoSessao" name="formFiltros:mesAnoSessao" size="1">	<option value="">selecione</option>
+	<option value="9/2020">9/2020</option>
+	<option value="8/2020" selected="selected">8/2020</option>
+	<option value="3/2020">3/2020</option>
+	<option value="2/2020">2/2020</option>
+	<option value="12/2019">12/2019</option>
+	<option value="11/2019">11/2019</option>
+	<option value="10/2019">10/2019</option>
+	<option value="9/2019">9/2019</option>
+	<option value="8/2019">8/2019</option>
+	<option value="6/2019">6/2019</option>
+	<option value="5/2019">5/2019</option>
+	<option value="4/2019">4/2019</option>
+	<option value="3/2019">3/2019</option>
+	<option value="2/2019">2/2019</option>
+	<option value="12/2018">12/2018</option>
+	<option value="11/2018">11/2018</option>
+	<option value="10/2018">10/2018</option>
+	<option value="9/2018">9/2018</option>
+	<option value="8/2018">8/2018</option>
+	<option value="7/2018">7/2018</option>
+	<option value="6/2018">6/2018</option>
+	<option value="5/2018">5/2018</option>
+	<option value="4/2018">4/2018</option>
+	<option value="3/2018">3/2018</option>
+	<option value="2/2018">2/2018</option>
+	<option value="12/2017">12/2017</option>
+	<option value="11/2017">11/2017</option>
+	<option value="10/2017">10/2017</option>
+	<option value="9/2017">9/2017</option>
+	<option value="8/2017">8/2017</option>
+	<option value="7/2017">7/2017</option>
+	<option value="6/2017">6/2017</option>
+	<option value="5/2017">5/2017</option>
+	<option value="4/2017">4/2017</option>
+	<option value="3/2017">3/2017</option>
+	<option value="2/2017">2/2017</option>
+	<option value="12/2016">12/2016</option>
+	<option value="11/2016">11/2016</option>
+	<option value="10/2016">10/2016</option>
+	<option value="9/2016">9/2016</option>
+	<option value="8/2016">8/2016</option>
+	<option value="7/2016">7/2016</option>
+	<option value="6/2016">6/2016</option>
+	<option value="5/2016">5/2016</option>
+	<option value="4/2016">4/2016</option>
+	<option value="3/2016">3/2016</option>
+	<option value="2/2016">2/2016</option>
+	<option value="12/2015">12/2015</option>
+	<option value="11/2015">11/2015</option>
+	<option value="10/2015">10/2015</option>
+	<option value="9/2015">9/2015</option>
+	<option value="8/2015">8/2015</option>
+	<option value="7/2015">7/2015</option>
+	<option value="6/2015">6/2015</option>
+	<option value="5/2015">5/2015</option>
+	<option value="4/2015">4/2015</option>
+	<option value="3/2015">3/2015</option>
+	<option value="2/2015">2/2015</option>
+	<option value="12/2014">12/2014</option>
+	<option value="11/2014">11/2014</option>
+	<option value="10/2014">10/2014</option>
+	<option value="9/2014">9/2014</option>
+	<option value="8/2014">8/2014</option>
+	<option value="7/2014">7/2014</option>
+	<option value="6/2014">6/2014</option>
+	<option value="5/2014">5/2014</option>
+	<option value="4/2014">4/2014</option>
+	<option value="3/2014">3/2014</option>
+	<option value="2/2014">2/2014</option>
+	<option value="12/2013">12/2013</option>
+	<option value="11/2013">11/2013</option>
+	<option value="10/2013">10/2013</option>
+	<option value="9/2013">9/2013</option>
+	<option value="8/2013">8/2013</option>
+	<option value="7/2013">7/2013</option>
+	<option value="6/2013">6/2013</option>
+	<option value="5/2013">5/2013</option>
+	<option value="4/2013">4/2013</option>
+	<option value="3/2013">3/2013</option>
+	<option value="2/2013">2/2013</option>
+	<option value="12/2012">12/2012</option>
+	<option value="11/2012">11/2012</option>
+	<option value="10/2012">10/2012</option>
+	<option value="9/2012">9/2012</option>
+	<option value="8/2012">8/2012</option>
+	<option value="6/2012">6/2012</option>
+	<option value="5/2012">5/2012</option>
+	<option value="4/2012">4/2012</option>
+	<option value="3/2012">3/2012</option>
+	<option value="2/2012">2/2012</option>
+	<option value="12/2011">12/2011</option>
+	<option value="11/2011">11/2011</option>
+	<option value="10/2011">10/2011</option>
+	<option value="9/2011">9/2011</option>
+	<option value="8/2011">8/2011</option>
+	<option value="6/2011">6/2011</option>
+	<option value="5/2011">5/2011</option>
+	<option value="4/2011">4/2011</option>
+	<option value="3/2011">3/2011</option>
+</select><input type="submit" name="formFiltros:j_idt17" value="Filtrar" class="elementoFiltro">
+		</fieldset><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:0" value="-7877107317461450614:-2279995346392881606" autocomplete="off">
+</form>	
+
+	<br><br>
+<form id="formResult" name="formResult" method="post" action="https://www.al.sp.gov.br/sigp-portal/default.xhtml" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="formResult" value="formResult">
+<div id="formResult:pnlResultado"><div id="formResult:tbFrequencia">
+			<h2 class="defaultHeader">Agosto/2020</h2>
+			
+			<div class="divScrollable">
+				<table>
+						<tbody><tr>
+							<td class="headerPresenca infoPresenca">
+								Dia
+							</td>
+								<td rowspan="3">
+									
+									<table>
+										<tbody><tr>
+											<td class="infoPresenca"><label>04</label>
+											</td>
+										</tr>
+										<tr>
+											<td class="infoPresenca"><label>O</label></td>
+										</tr>
+										<tr>
+												<td class="infoPresenca">
+												
+												 <!-- C&oacute;digo feio necess&aacute;rio porque o  f:convertDateTime s&oacute; reconehce a data se ela estiver sozinha no label.--><label id="formResult:j_idt21:0:statusPresenca">P</label>											
+																								
+												</td>																		
+										</tr>
+									</tbody></table>
+									
+								</td>
+								<td rowspan="3">
+									
+									<table>
+										<tbody><tr>
+											<td class="infoPresenca"><label>05</label>
+											</td>
+										</tr>
+										<tr>
+											<td class="infoPresenca"><label>O</label></td>
+										</tr>
+										<tr>
+												<td class="infoPresenca">
+												
+												 <!-- C&oacute;digo feio necess&aacute;rio porque o  f:convertDateTime s&oacute; reconehce a data se ela estiver sozinha no label.--><label id="formResult:j_idt21:1:statusPresenca">P</label>											
+																								
+												</td>																		
+										</tr>
+									</tbody></table>
+									
+								</td>
+								<td rowspan="3">
+									
+									<table>
+										<tbody><tr>
+											<td class="infoPresenca"><label>06</label>
+											</td>
+										</tr>
+										<tr>
+											<td class="infoPresenca"><label>O</label></td>
+										</tr>
+										<tr>
+												<td class="infoPresenca">
+												
+												 <!-- C&oacute;digo feio necess&aacute;rio porque o  f:convertDateTime s&oacute; reconehce a data se ela estiver sozinha no label.--><label id="formResult:j_idt21:2:statusPresenca">P</label>											
+																								
+												</td>																		
+										</tr>
+									</tbody></table>
+									
+								</td>
+								<td rowspan="3">
+									
+									<table>
+										<tbody><tr>
+											<td class="infoPresenca"><label>07</label>
+											</td>
+										</tr>
+										<tr>
+											<td class="infoPresenca"><label>O</label></td>
+										</tr>
+										<tr>
+												<td class="infoPresenca">
+												
+												 <!-- C&oacute;digo feio necess&aacute;rio porque o  f:convertDateTime s&oacute; reconehce a data se ela estiver sozinha no label.--><label id="formResult:j_idt21:3:statusPresenca">CQR</label>											
+																								
+												</td>																		
+										</tr>
+									</tbody></table>
+									
+								</td>
+								<td rowspan="3">
+									
+									<table>
+										<tbody><tr>
+											<td class="infoPresenca"><label>10</label>
+											</td>
+										</tr>
+										<tr>
+											<td class="infoPresenca"><label>O</label></td>
+										</tr>
+										<tr>
+												<td class="infoPresenca">
+												
+												 <!-- C&oacute;digo feio necess&aacute;rio porque o  f:convertDateTime s&oacute; reconehce a data se ela estiver sozinha no label.--><label id="formResult:j_idt21:4:statusPresenca">CQR</label>											
+																								
+												</td>																		
+										</tr>
+									</tbody></table>
+									
+								</td>
+								<td rowspan="3">
+									
+									<table>
+										<tbody><tr>
+											<td class="infoPresenca"><label>11</label>
+											</td>
+										</tr>
+										<tr>
+											<td class="infoPresenca"><label>O</label></td>
+										</tr>
+										<tr>
+												<td class="infoPresenca">
+												
+												 <!-- C&oacute;digo feio necess&aacute;rio porque o  f:convertDateTime s&oacute; reconehce a data se ela estiver sozinha no label.--><label id="formResult:j_idt21:5:statusPresenca">P</label>											
+																								
+												</td>																		
+										</tr>
+									</tbody></table>
+									
+								</td>
+								<td rowspan="3">
+									
+									<table>
+										<tbody><tr>
+											<td class="infoPresenca"><label>11</label>
+											</td>
+										</tr>
+										<tr>
+											<td class="infoPresenca"><label>E</label></td>
+										</tr>
+										<tr>
+												<td class="infoPresenca">
+												
+												 <!-- C&oacute;digo feio necess&aacute;rio porque o  f:convertDateTime s&oacute; reconehce a data se ela estiver sozinha no label.--><label id="formResult:j_idt21:6:statusPresenca">P</label>											
+																								
+												</td>																		
+										</tr>
+									</tbody></table>
+									
+								</td>
+								<td rowspan="3">
+									
+									<table>
+										<tbody><tr>
+											<td class="infoPresenca"><label>12</label>
+											</td>
+										</tr>
+										<tr>
+											<td class="infoPresenca"><label>R</label></td>
+										</tr>
+										<tr>
+												<td class="infoPresenca">
+												
+												 <!-- C&oacute;digo feio necess&aacute;rio porque o  f:convertDateTime s&oacute; reconehce a data se ela estiver sozinha no label.--><label id="formResult:j_idt21:7:statusPresenca">J</label>											
+																								
+												</td>																		
+										</tr>
+									</tbody></table>
+									
+								</td>
+								<td rowspan="3">
+									
+									<table>
+										<tbody><tr>
+											<td class="infoPresenca"><label>13</label>
+											</td>
+										</tr>
+										<tr>
+											<td class="infoPresenca"><label>O</label></td>
+										</tr>
+										<tr>
+												<td class="infoPresenca">
+												
+												 <!-- C&oacute;digo feio necess&aacute;rio porque o  f:convertDateTime s&oacute; reconehce a data se ela estiver sozinha no label.--><label id="formResult:j_idt21:8:statusPresenca">P</label>											
+																								
+												</td>																		
+										</tr>
+									</tbody></table>
+									
+								</td>
+								<td rowspan="3">
+									
+									<table>
+										<tbody><tr>
+											<td class="infoPresenca"><label>13</label>
+											</td>
+										</tr>
+										<tr>
+											<td class="infoPresenca"><label>E</label></td>
+										</tr>
+										<tr>
+												<td class="infoPresenca">
+												
+												 <!-- C&oacute;digo feio necess&aacute;rio porque o  f:convertDateTime s&oacute; reconehce a data se ela estiver sozinha no label.--><label id="formResult:j_idt21:9:statusPresenca">P</label>											
+																								
+												</td>																		
+										</tr>
+									</tbody></table>
+									
+								</td>
+								<td rowspan="3">
+									
+									<table>
+										<tbody><tr>
+											<td class="infoPresenca"><label>14</label>
+											</td>
+										</tr>
+										<tr>
+											<td class="infoPresenca"><label>O</label></td>
+										</tr>
+										<tr>
+												<td class="infoPresenca">
+												
+												 <!-- C&oacute;digo feio necess&aacute;rio porque o  f:convertDateTime s&oacute; reconehce a data se ela estiver sozinha no label.--><label id="formResult:j_idt21:10:statusPresenca">CQR</label>											
+																								
+												</td>																		
+										</tr>
+									</tbody></table>
+									
+								</td>
+								<td rowspan="3">
+									
+									<table>
+										<tbody><tr>
+											<td class="infoPresenca"><label>17</label>
+											</td>
+										</tr>
+										<tr>
+											<td class="infoPresenca"><label>O</label></td>
+										</tr>
+										<tr>
+												<td class="infoPresenca">
+												
+												 <!-- C&oacute;digo feio necess&aacute;rio porque o  f:convertDateTime s&oacute; reconehce a data se ela estiver sozinha no label.--><label id="formResult:j_idt21:11:statusPresenca">CQR</label>											
+																								
+												</td>																		
+										</tr>
+									</tbody></table>
+									
+								</td>
+								<td rowspan="3">
+									
+									<table>
+										<tbody><tr>
+											<td class="infoPresenca"><label>18</label>
+											</td>
+										</tr>
+										<tr>
+											<td class="infoPresenca"><label>O</label></td>
+										</tr>
+										<tr>
+												<td class="infoPresenca">
+												
+												 <!-- C&oacute;digo feio necess&aacute;rio porque o  f:convertDateTime s&oacute; reconehce a data se ela estiver sozinha no label.--><label id="formResult:j_idt21:12:statusPresenca">P</label>											
+																								
+												</td>																		
+										</tr>
+									</tbody></table>
+									
+								</td>
+								<td rowspan="3">
+									
+									<table>
+										<tbody><tr>
+											<td class="infoPresenca"><label>18</label>
+											</td>
+										</tr>
+										<tr>
+											<td class="infoPresenca"><label>E</label></td>
+										</tr>
+										<tr>
+												<td class="infoPresenca">
+												
+												 <!-- C&oacute;digo feio necess&aacute;rio porque o  f:convertDateTime s&oacute; reconehce a data se ela estiver sozinha no label.--><label id="formResult:j_idt21:13:statusPresenca">P</label>											
+																								
+												</td>																		
+										</tr>
+									</tbody></table>
+									
+								</td>
+								<td rowspan="3">
+									
+									<table>
+										<tbody><tr>
+											<td class="infoPresenca"><label>19</label>
+											</td>
+										</tr>
+										<tr>
+											<td class="infoPresenca"><label>O</label></td>
+										</tr>
+										<tr>
+												<td class="infoPresenca">
+												
+												 <!-- C&oacute;digo feio necess&aacute;rio porque o  f:convertDateTime s&oacute; reconehce a data se ela estiver sozinha no label.--><label id="formResult:j_idt21:14:statusPresenca">P</label>											
+																								
+												</td>																		
+										</tr>
+									</tbody></table>
+									
+								</td>
+								<td rowspan="3">
+									
+									<table>
+										<tbody><tr>
+											<td class="infoPresenca"><label>19</label>
+											</td>
+										</tr>
+										<tr>
+											<td class="infoPresenca"><label>E</label></td>
+										</tr>
+										<tr>
+												<td class="infoPresenca">
+												
+												 <!-- C&oacute;digo feio necess&aacute;rio porque o  f:convertDateTime s&oacute; reconehce a data se ela estiver sozinha no label.--><label id="formResult:j_idt21:15:statusPresenca">P</label>											
+																								
+												</td>																		
+										</tr>
+									</tbody></table>
+									
+								</td>
+								<td rowspan="3">
+									
+									<table>
+										<tbody><tr>
+											<td class="infoPresenca"><label>20</label>
+											</td>
+										</tr>
+										<tr>
+											<td class="infoPresenca"><label>O</label></td>
+										</tr>
+										<tr>
+												<td class="infoPresenca">
+												
+												 <!-- C&oacute;digo feio necess&aacute;rio porque o  f:convertDateTime s&oacute; reconehce a data se ela estiver sozinha no label.--><label id="formResult:j_idt21:16:statusPresenca">P</label>											
+																								
+												</td>																		
+										</tr>
+									</tbody></table>
+									
+								</td>
+								<td rowspan="3">
+									
+									<table>
+										<tbody><tr>
+											<td class="infoPresenca"><label>21</label>
+											</td>
+										</tr>
+										<tr>
+											<td class="infoPresenca"><label>R</label></td>
+										</tr>
+										<tr>
+												<td class="infoPresenca">
+												
+												 <!-- C&oacute;digo feio necess&aacute;rio porque o  f:convertDateTime s&oacute; reconehce a data se ela estiver sozinha no label.--><label id="formResult:j_idt21:17:statusPresenca">J</label>											
+																								
+												</td>																		
+										</tr>
+									</tbody></table>
+									
+								</td>
+								<td rowspan="3">
+									
+									<table>
+										<tbody><tr>
+											<td class="infoPresenca"><label>24</label>
+											</td>
+										</tr>
+										<tr>
+											<td class="infoPresenca"><label>O</label></td>
+										</tr>
+										<tr>
+												<td class="infoPresenca">
+												
+												 <!-- C&oacute;digo feio necess&aacute;rio porque o  f:convertDateTime s&oacute; reconehce a data se ela estiver sozinha no label.--><label id="formResult:j_idt21:18:statusPresenca">CQR</label>											
+																								
+												</td>																		
+										</tr>
+									</tbody></table>
+									
+								</td>
+								<td rowspan="3">
+									
+									<table>
+										<tbody><tr>
+											<td class="infoPresenca"><label>25</label>
+											</td>
+										</tr>
+										<tr>
+											<td class="infoPresenca"><label>O</label></td>
+										</tr>
+										<tr>
+												<td class="infoPresenca">
+												
+												 <!-- C&oacute;digo feio necess&aacute;rio porque o  f:convertDateTime s&oacute; reconehce a data se ela estiver sozinha no label.--><label id="formResult:j_idt21:19:statusPresenca">P</label>											
+																								
+												</td>																		
+										</tr>
+									</tbody></table>
+									
+								</td>
+								<td rowspan="3">
+									
+									<table>
+										<tbody><tr>
+											<td class="infoPresenca"><label>25</label>
+											</td>
+										</tr>
+										<tr>
+											<td class="infoPresenca"><label>E</label></td>
+										</tr>
+										<tr>
+												<td class="infoPresenca">
+												
+												 <!-- C&oacute;digo feio necess&aacute;rio porque o  f:convertDateTime s&oacute; reconehce a data se ela estiver sozinha no label.--><label id="formResult:j_idt21:20:statusPresenca">P</label>											
+																								
+												</td>																		
+										</tr>
+									</tbody></table>
+									
+								</td>
+								<td rowspan="3">
+									
+									<table>
+										<tbody><tr>
+											<td class="infoPresenca"><label>25</label>
+											</td>
+										</tr>
+										<tr>
+											<td class="infoPresenca"><label>E</label></td>
+										</tr>
+										<tr>
+												<td class="infoPresenca">
+												
+												 <!-- C&oacute;digo feio necess&aacute;rio porque o  f:convertDateTime s&oacute; reconehce a data se ela estiver sozinha no label.--><label id="formResult:j_idt21:21:statusPresenca">P</label>											
+																								
+												</td>																		
+										</tr>
+									</tbody></table>
+									
+								</td>
+								<td rowspan="3">
+									
+									<table>
+										<tbody><tr>
+											<td class="infoPresenca"><label>26</label>
+											</td>
+										</tr>
+										<tr>
+											<td class="infoPresenca"><label>O</label></td>
+										</tr>
+										<tr>
+												<td class="infoPresenca">
+												
+												 <!-- C&oacute;digo feio necess&aacute;rio porque o  f:convertDateTime s&oacute; reconehce a data se ela estiver sozinha no label.--><label id="formResult:j_idt21:22:statusPresenca">P</label>											
+																								
+												</td>																		
+										</tr>
+									</tbody></table>
+									
+								</td>
+								<td rowspan="3">
+									
+									<table>
+										<tbody><tr>
+											<td class="infoPresenca"><label>27</label>
+											</td>
+										</tr>
+										<tr>
+											<td class="infoPresenca"><label>O</label></td>
+										</tr>
+										<tr>
+												<td class="infoPresenca">
+												
+												 <!-- C&oacute;digo feio necess&aacute;rio porque o  f:convertDateTime s&oacute; reconehce a data se ela estiver sozinha no label.--><label id="formResult:j_idt21:23:statusPresenca">P</label>											
+																								
+												</td>																		
+										</tr>
+									</tbody></table>
+									
+								</td>
+								<td rowspan="3">
+									
+									<table>
+										<tbody><tr>
+											<td class="infoPresenca"><label>28</label>
+											</td>
+										</tr>
+										<tr>
+											<td class="infoPresenca"><label>O</label></td>
+										</tr>
+										<tr>
+												<td class="infoPresenca">
+												
+												 <!-- C&oacute;digo feio necess&aacute;rio porque o  f:convertDateTime s&oacute; reconehce a data se ela estiver sozinha no label.--><label id="formResult:j_idt21:24:statusPresenca">CQR</label>											
+																								
+												</td>																		
+										</tr>
+									</tbody></table>
+									
+								</td>
+								<td rowspan="3">
+									
+									<table>
+										<tbody><tr>
+											<td class="infoPresenca"><label>31</label>
+											</td>
+										</tr>
+										<tr>
+											<td class="infoPresenca"><label>O</label></td>
+										</tr>
+										<tr>
+												<td class="infoPresenca">
+												
+												 <!-- C&oacute;digo feio necess&aacute;rio porque o  f:convertDateTime s&oacute; reconehce a data se ela estiver sozinha no label.--><label id="formResult:j_idt21:25:statusPresenca">CQR</label>											
+																								
+												</td>																		
+										</tr>
+									</tbody></table>
+									
+								</td>
+								
+						</tr>
+							
+						<tr>
+							<td class="headerPresenca infoPresenca">Tipo da sessão</td>
+						</tr>
+						<tr>
+							<td class="headerPresenca infoPresenca">Presença</td>
+						</tr>
+					</tbody></table>
+				</div>
+				<fieldset>
+					<legend>Legenda</legend>	
+
+					<h4 class="headerFieldset">Tipos de sessão</h4>
+					<ul class="listLegenda">
+						<li><span class="legenda">O: Sessão Ordinária</span></li>
+						<li><span class="legenda">E: Sessão Extraordinária</span></li>
+						<li><span class="legenda">R: Reunião</span></li>
+						<li><span class="legenda">I: Inaugural</span></li>
+						<li><span class="legenda">PI: Preparatória Inaugural</span></li>
+					</ul>					
+					<div>
+						<h4 class="headerFieldset">Tipos de presença/ausência</h4>
+						<ul class="listLegenda" id="legendaAusencia">
+							<li><span class="legenda">P: Presente</span></li>
+							<li><span class="legenda">I: Indefinida<sup><a href="https://www.al.sp.gov.br/sigp-portal/default.xhtml#indExp">[1]</a></sup></span></li>							
+							<li><span class="legenda">J: Justificada nos termos do art. 90, §1º, "2", XIV RI<sup><a href="https://www.al.sp.gov.br/sigp-portal/default.xhtml#riExp">[3]</a></sup></span></li>
+							<li><span class="legenda">N: Não justificada</span></li>							
+							<li><span class="legenda">AE: Ausência em Sessão Extraordinária</span></li>
+							<li><span class="legenda">CQR: Com quórum regimental para abertura da sessão<sup><a href="https://www.al.sp.gov.br/sigp-portal/default.xhtml#sndExp">[2]</a></sup></span></li>							
+							<li><span class="legenda">SP: A serviço do Poder Legislativo (art. 90, § 3º, XIV RI)<sup><a href="https://www.al.sp.gov.br/sigp-portal/default.xhtml#riExp">[3]</a></sup></span></li>
+							<li><span class="legenda">C: Em Comissão de Representação ou CPI (art. 90, §1º, "1", XIV RI)<sup><a href="https://www.al.sp.gov.br/sigp-portal/default.xhtml#riExp">[3]</a></sup></span></li>
+							<li><span class="legenda">A: Em Audiência Pública</span></li>
+							<li><span class="legenda">LS: Licença Saúde (art. 84, II, XIV RI)<sup><a href="https://www.al.sp.gov.br/sigp-portal/default.xhtml#riExp">[3]</a></sup></span></li>
+							<li><span class="legenda">LIP: Licença de Interesse Particular (art. 84, III, XIV RI)<sup><a href="https://www.al.sp.gov.br/sigp-portal/default.xhtml#riExp">[3]</a></sup></span></li>
+							<li><span class="legenda">LG: Licença Gestante (art. 84, § 1º, XIV RI)<sup><a href="https://www.al.sp.gov.br/sigp-portal/default.xhtml#riExp">[3]</a></sup></span></li>
+							<li><span class="legenda">LP: Licença Paternidade</span></li>
+							<li><span class="legenda">LMC: Licença para Missão Diplomática ou Cultural (art. 84, I, XIV RI)<sup><a href="https://www.al.sp.gov.br/sigp-portal/default.xhtml#riExp">[3]</a></sup></span></li>
+							<li><span class="legenda">D: Dispensado(a) nos termos do artigo 8º do Ato da Mesa nº 3, de 17 de março de 2020, e nos termos do artigo 7º, § 4º, do Ato do Presidente nº 52, de 30 de julho de 2020.</span></li>
+						</ul>							
+								
+					</div>	
+					<br>								
+				</fieldset>
+				<div>
+						<span id="indExp">1. Os lançamentos de ausências indefinidas poderão sofrer alterações até o fim do presente mês, após regularização pelos Deputados, nos termos dos artigos 84 ou 90 da XIV Consolidação do <a href="http://www.al.sp.gov.br/leis/regimento-interno/" target="_top">Regimento Interno</a>.</span>
+						<br>
+						<span id="sndExp">2. Sessões não deliberativas são tratadas de forma especial, <a href="https://www.al.sp.gov.br/sigp-portal/sigp-portal/pages/frequencia/regras.xhtml" target="_self">clique aqui</a> para mais informações.</span>	
+						<br>
+						<span id="riExp">3. De acordo com a XIV Consolidação do <a href="http://www.al.sp.gov.br/leis/regimento-interno/" target="_top">Regimento Interno</a>.</span>
+
+				</div></div></div><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:0" value="-7877107317461450614:-2279995346392881606" autocomplete="off">
+</form>
+
+<div id="textarea_simulator" style="position: absolute; top: 0px; left: 0px; visibility: hidden;"></div></body></html>

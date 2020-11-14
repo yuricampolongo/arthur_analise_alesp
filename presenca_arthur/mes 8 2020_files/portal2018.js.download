@@ -1,0 +1,117 @@
+//Jquery functions
+$( document ).ready(function() {
+	
+	// hover Menu topo
+	if(window.innerWidth > 1199){
+	$('li.nav-item').hover(function() {
+		  $(this).find('.dropdown-menu').stop(true, true).delay(10).fadeIn(10);
+		}, function() {
+		  $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeOut(10);
+		});
+	}	
+	// Mapa Site
+	$('#mapaSite').hide();
+	$('#seta-sobe').hide();
+	
+	//Executa uma vez
+		noticiasInstantaneas();
+	//Atualiza a cada 10 minutos
+		var noticias = setInterval(noticiasInstantaneas, 300000);
+	
+});
+
+//Javascript functions
+function searchKeyPress(e){
+    // look for window.event in case event isn't passed in
+    e = e || window.event;
+    if (e.keyCode == 13)
+    {
+    	if(document.busca_mobile.q.value != ""){
+    		submeterBuscaMobile();
+    	}else{
+    		submeterBuscaGeral();
+    	}
+        return false;
+    }
+    return true;
+}
+
+function submeterBuscaGeral() {
+	var form = document.busca;
+	form.q.value = encodeURI(form.query.value);
+    document.busca.submit();
+}
+
+function submeterLegislacao() {
+	
+	document.formLegislacao.texto.value = encodeURI(document.formLegislacao.texto.value);
+	document.formLegislacao.submit();
+	document.formLegislacao.texto.value = decodeURI(document.formLegislacao.texto.value);
+}
+
+function submeterProjetos() {
+	
+	document.formProjetos.text.value = encodeURI(document.formProjetos.text.value);
+	document.formProjetos.submit();
+	document.formProjetos.text.value = decodeURI(document.formProjetos.text.value);
+}
+
+function paginaProjetos() {
+	
+	document.formProjetos.method.value = 'inicio';
+	document.formProjetos.submit();
+}
+
+function retiraAcentos(str) 
+{
+    com_acento = "ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿ";
+	sem_acento = "AAAAAAACEEEEIIIIDNOOOOOOUUUUYsBaaaaaaaceeeeiiiionoooooouuuuyby";
+	
+    novastr="";
+    for(i=0; i<str.length; i++) {
+        troca=false;
+        for (a=0; a<com_acento.length; a++) {
+            if (str.substr(i,1)==com_acento.substr(a,1)) {
+                novastr+=sem_acento.substr(a,1);
+                troca=true;
+                break;
+            }
+        }
+        if (troca==false) {
+            novastr+=str.substr(i,1);
+        }
+    }
+    
+    return novastr;
+} 	
+
+function controleAgenda(){	
+//	$('#controleAgenda').click(function(){
+		if ($('.agenda-container').hasClass('continuar')){
+			$('.agenda-container').css('animation-play-state','paused');			
+			$('.agenda-container').removeClass('continuar').addClass('parar');
+			$('#controleAgendaPlay').show();
+			$('#controleAgendaPause').hide();
+		}
+		else{
+			$('.agenda-container').css('animation-play-state','running');	
+			$('.agenda-container').addClass('continuar').removeClass('parar');3
+			$('#controleAgendaPlay').hide();
+			$('#controleAgendaPause').show();
+		}			
+//  });
+}
+
+//Notícias Instantâneas 07/2020
+function noticiasInstantaneas(){
+	var noticiasInstantaneas = $('#row-noticias');	
+	var intantaneas = "/dinamico/homepage/conteudo/row1.jsp";
+	$('#noticias a, #noticias div').delay("1000").fadeOut("slow");	
+	$('#noticias a, #noticias div').fadeIn();	
+	noticiasInstantaneas.load(intantaneas);
+	
+	var now = new Date(Date.now());
+	var instante = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
+
+	//console.log("Ultima atualizacao de noticias "+ instante);
+}
